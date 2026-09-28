@@ -629,7 +629,7 @@ class ARDConfigScreen(Setup):
 	def DirectoryBrowserClosed(self, path):
 		if path:
 			config.plugins.ARD.savetopath.value = path
-			self["config"].invalidateEntry(self["config"].getCurrentIndex())
+			self["config"].invalidateCurrent()
 
 
 class DirBrowser(Screen):
